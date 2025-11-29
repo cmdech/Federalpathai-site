@@ -70,6 +70,28 @@
       color: #6b7280;
       padding: 1.5rem 1rem;
     }
+
+
+    /* ==== FederalPathAI: Mobile-Friendly Input Fix ==== */
+
+/* Base styling to prevent Android dark mode overrides */
+input,
+textarea {
+  background-color: #ffffff !important;
+  color: #111827 !important;      /* readable dark text */
+  border: 1px solid #d1d5db !important;
+  caret-color: #111827 !important;
+}
+
+/* Ensure light-mode styling even when device is set to dark mode */
+@media (prefers-color-scheme: dark) {
+  input,
+  textarea {
+    background-color: #ffffff !important;
+    color: #111827 !important;
+  }
+}
+
   </style>
 </head>
 <body>
